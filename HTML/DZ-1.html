@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>DZ_1</title>
+</head>
+<body>
+    <h2>
+        Методы консоли браузера
+    </h2>
+    <p>
+        По мотивам https://inter-net.pro/javascript/console
+    </p>
+    <script>    
+        console.time('Время пошло'); // Таймер выполнения всего кода
+            
+            // Сообщение с несколькими параметрами
+            console.log(1, 'Занятие', 28,1,2020);
+            
+            // С переменными и маской
+            var mes = 'Занятие 1';
+            var day = 28;
+            var month = 1;
+            var year = 2020;
+            console.log('Когда было %s ? %s-%s-%s', mes, day, month, year);
+        
+            // Вывод DOM-элемента (URL адрес)
+            console.dir(document.URL);
+
+            // Форматированные сообщения
+            console.info('Если долго мучаться, что-нибудь получится');
+            console.warn('Не переусердствуй!');
+            console.error('Ослик сдох...');
+            
+            // Группы сообщений
+            console.group('Страны');
+                console.log('Украина');
+                    console.group('Города');
+                        console.log('Киев');
+                        console.log('Одесса');
+                        console.log('Львов');
+                    console.groupEnd('Города');
+                console.log('Италия');
+                    console.group('Города');
+                        console.log('Рим');
+                        console.log('Неаполь');
+                    console.groupEnd('Города');
+            console.groupEnd('Страны');
+                
+            // Таблица
+                var frutis = ['яблоко', 'киви', 'груша', 'апельсин'];
+                console.table(frutis);
+
+                var perimetr = [];
+                for (var radius = 1; radius <= 3; radius++) {
+                    perimetr.push(2*Math.PI * radius);
+                }
+                console.table(perimetr);
+
+            console.timeEnd('Время пошло'); // завершение таймера
+    </script>
+
+    
+</body>
+</html>
