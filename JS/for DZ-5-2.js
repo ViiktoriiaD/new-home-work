@@ -6,6 +6,7 @@
 var numberUser;
 var checkNumber;
 var failureCounter;
+var text;
 
 var  numberGenerator= Math.floor(Math.random() * 5 + 1);
 
@@ -18,7 +19,7 @@ do {
         console.log("Вы не ввели число!");
     } else {
         checkNumber = (numberUser === numberGenerator);
-        var text = checkNumber ?  "И у меня " + numberGenerator + " Угадал!" : " Не угадал!";  
+        text = checkNumber ?  "И у меня " + numberGenerator + " Угадал!" : " Не угадал!";  
         console.log(text);
         failureCounter++;
     }
@@ -38,7 +39,8 @@ while (!checkNumber) {
         console.log("Вы не ввели число!");
     } else {
         checkNumber = (numberUser === numberGenerator);
-        checkNumber ? console.log("И у меня " + numberGenerator + " Угадал!") : console.log("Не угадал!");  
+        text = checkNumber ?  "И у меня " + numberGenerator + " Угадал!" : " Не угадал!";  
+        console.log(text);
         failureCounter++;
             }
 }
