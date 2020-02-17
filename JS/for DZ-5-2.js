@@ -18,7 +18,8 @@ do {
         console.log("Вы не ввели число!");
     } else {
         checkNumber = (numberUser === numberGenerator);
-        checkNumber ?  console.log("И у меня " + numberGenerator + " Угадал!") : console.log(" Не угадал!");  
+        var text = checkNumber ?  "И у меня " + numberGenerator + " Угадал!" : " Не угадал!";  
+        console.log(text);
         failureCounter++;
     }
     
